@@ -29,7 +29,7 @@ ros_data = np.copy(raw_ros_data)
 
 # Adjust only the decline phase (4th column, index 3)
 ros_data[:, 3] = raw_ros_data[:, 3] * (lifespan / similar_lifespans)
-ros_data[:, 3] = np.clip(ros_data[:, 3], 0, ros_data[:,0])    ## try with both, i.e growth and maturity
+# ros_data[:, 3] = np.clip(ros_data[:, 3], 0, ros_data[:,0])    ## try with both, i.e growth and maturity
 
 # 7. Compute avg ROS per phase
 ros_mean = ros_data.mean(axis=0)
